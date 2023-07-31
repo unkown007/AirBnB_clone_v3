@@ -19,7 +19,7 @@ def closeSession(error):
 @app.errorhandler(404)
 def handle_api_error(ex):
     """ handle 404 not found error """
-    return jsonify({"error": "Not found"})
+    return jsonify({"error": "Not found"}), 404
 
 
 if __name__ == "__main__":
