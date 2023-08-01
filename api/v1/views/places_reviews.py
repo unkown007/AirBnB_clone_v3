@@ -77,4 +77,4 @@ def update_review(review_id):
                 "place_id"]:
             setattr(review, key, value)
     review.save()
-    return jsonfify(state.to_dict()), 200
+    return jsonfify(review.to_dict()), 200
